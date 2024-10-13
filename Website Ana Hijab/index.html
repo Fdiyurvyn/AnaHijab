@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ecommerce Hijab</title>
+    <!-- Link CSS -->
+     <link rel="stylesheet" href="style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+ integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+ crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet"
+ href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+ <link rel="icon" href="image/icon.png" type="image/x-icon">
+  
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="logo"><img src="img/logo.png" alt="" class="no-dark-mode"></a>
+        <ul class="navmenu">
+            <h2 align="center">Ana Hijab Store</h2>
+            <li><a href="#home">home</a></li>
+            <li><a href="#shop">shop</a></li>
+            <li><a href="#Client">Client Review</a></li>
+            <li><a href="#Help">Help</a></li>
+        </ul>
+
+        <div class="nav-icon">
+            
+            <div class="nav-icon">
+                <!-- Icon pencarian dengan input -->
+               <a href="#" id="search-icon"><i class='bx bx-search'></i></a>
+               <input type="text" id="search-bar" placeholder="Cari produk..." style="display: none;">
+
+                <a href="#"><i class='bx bx-user'></i></a>
+            
+                <!-- Keranjang dengan Badge -->
+                <a href="#" id="cart-icon"><i class='bx bx-cart'></i><span id="cart-count">0</span></a>
+            
+                <div id="cart-dropdown" class="cart-dropdown">
+                    <h3>Keranjang</h3>
+                    <ul id="cart-items"></ul>
+                    <button id="remove">Hapus</button>
+                    <button id="checkout-btn">Checkout</button>
+                </div>
+            
+                
+            
+            <div class="bx bx-menu" id="menu-icon"></div>
+            
+            <i class="bx bx-moon" onclick="toggleDarkMode()"></i>
+        </div>
+        
+    </header>
+    <section class="main-home">
+        
+        <div class="main-text" id="home">
+
+            <h5>Weekend Collection</h5>
+            <h1>New Weekend <br>Collection 2024</h1>
+            <p>There's Nothing like Trend</p>
+
+            <a href="#shop" class="main-btn">Shop Now <i class='bx bx-right-arrow-alt'></i></a>
+        </div>
+
+        <div class="down-arrow">
+            <a href="#trending" class="down"><i class='bx bx-down-arrow-alt'></i></a>
+        </div>
+    </section>
+    <!-- trending-products-section -->
+    <section class="trending-products" id="trending">
+
+        <div class="center-text">
+            <h2>Shop <span>products</span> </h2>
+        </div>
+
+        <div class="products" id="shop">
+            <div class="row">
+                <img src="image/1.jpg" alt="">
+                <div class="products-text">
+                    <h5>Sale</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="ratting">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Set</h4>
+                    <p>$99 - $129</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-buy-now" onclick="buyNow('Half Running Set')">Beli Sekarang!</button>
+                    <button class="btn-add-to-cart" onclick="addToCart('Half Running Set')">Masukkan Keranjang<i class='bx bx-cart'></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="image/2.jpg" alt="">
+                <div class="products-text">
+                    <h5>New</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="ratting">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Formal Men Lowers</h4>
+                    <p>$99 - $129</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-buy-now" onclick="buyNow('Formal Men Lowers')">Beli Sekarang!</button>
+                    <button class="btn-add-to-cart" onclick="addToCart('Formal Men Lowers')">Masukkan Keranjang<i class='bx bx-cart'></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="image/3.jpg" alt="">
+            
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="ratting">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Running Suit</h4>
+                    <p>$99 - $129</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-buy-now" onclick="buyNow('Half Running Suit')">Beli Sekarang!</button>
+                    <button class="btn-add-to-cart" onclick="addToCart('Half Running Suit')">Masukkan Keranjang<i class='bx bx-cart'></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="image/4.jpg" alt="">
+                <div class="products-text">
+                    <h5>Hot</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="ratting">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Half Fancy Lady Dress</h4>
+                    <p>$99 - $129</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-buy-now" onclick="buyNow('Half Fancy Lady Dress')">Beli Sekarang!</button>
+                    <button class="btn-add-to-cart" onclick="addToCart('Half Fancy Lady Dress')">Masukkan Keranjang<i class='bx bx-cart'></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="image/5.jpg" alt="">
+                
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="ratting">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Flix Flox Jeans</h4>
+                    <p>$99 - $129</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-buy-now" onclick="buyNow('Flix Flox Jeans')">Beli Sekarang!</button>
+                    <button class="btn-add-to-cart" onclick="addToCart('Flix Flox Jeans')">Masukkan Keranjang<i class='bx bx-cart'></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="image/6.jpg" alt="">
+                <div class="products-text">
+                    <h5>Hot</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="ratting">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Fancy Salwar Suits</h4>
+                    <p>$99 - $129</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-buy-now" onclick="buyNow('Fancy Salwar Suits')">Beli Sekarang!</button>
+                    <button class="btn-add-to-cart" onclick="addToCart('Fancy Salwar Suits')">Masukkan Keranjang<i class='bx bx-cart'></i></button>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="image/7.jpg" alt="">
+                <div class="products-text">
+                    <h5>Sale</h5>
+                </div>
+                <div class="heart-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="ratting">
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bx-star'></i>
+                    <i class='bx bxs-star-half'></i>
+                </div>
+                <div class="price">
+                    <h4>Printed Straight kurta</h4>
+                    <p>$99 - $129</p>
+                </div>
+                <div class="product-actions">
+                    <button class="btn-buy-now" onclick="buyNow('Printed Straight kurta')">Beli Sekarang!</button>
+                    <button class="btn-add-to-cart" onclick="addToCart('Printed Straight kurta')">Masukkan Keranjang<i class='bx bx-cart'></i></button>
+                </div>
+            </div>    
+                <div class="row">
+                    <img src="image/8.jpg" alt="">
+                    <div class="products-text">
+                        <h5>Sale</h5>
+                    </div>
+                    <div class="heart-icon">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <div class="price">
+                        <h4>Collot Full Oress</h4>
+                        <p>$99 - $129</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-buy-now" onclick="buyNow('Collot Full Oress')">Beli Sekarang!</button>
+                        <button class="btn-add-to-cart" onclick="addToCart('Collot Full Oress')">Masukkan Keranjang<i class='bx bx-cart'></i></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <img src="image/9.jpg" alt="" style="width: 295px;">
+                    <div class="products-text">
+                        <h5>Sale</h5>
+                    </div>
+                    <div class="heart-icon">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="ratting">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bxs-star-half'></i>
+                    </div>
+                    <div class="price">
+                        <h4>Hijab</h4>
+                        <p>$99 - $129</p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-buy-now" onclick="buyNow('Hijab')">Beli Sekarang!</button>
+                        <button class="btn-add-to-cart" onclick="addToCart('Hijab')">Masukkan Keranjang<i class='bx bx-cart'></i></button>
+                    </div>
+                </div>
+        </div>
+
+    </section>
+
+    <!-- Client-Review-section -->
+
+    <section class="client-reviews">
+        <div class="reviews" id="Client">
+            <h3>Client Reviews</h3>
+            <img src="image/team-1.jpg" alt="">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna <br>aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis <br> aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <h2>Oki Setiana Dewi</h2>
+            <p>Artist</p>
+        </div>
+    </section>
+
+    <!-- update-news-section -->
+
+    
+    <!-- contact-section -->
+
+    <section class="contact">
+        <div class="contact-info" id="Help">
+            <div class="first-info">
+                <img src="img/logo.png" alt="" style="max-width: 180px;">
+
+                <p>5271 Jl Yos Sudarso, <br> TX indonesia</p>
+                <p>0858689432</p>
+                <p>fadhilunlimited@gmail.com</p>
+
+                <div class="social-icon">
+                    <a href="https://id-id.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://x.com/?lang=en"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></a>        
+                    <a href="https://web.whatsapp.com/"><i class='bx bxl-whatsapp'></i></a>        
+                </div>
+            </div>
+
+            <div class="second-info">
+                <h4>Support</h4>
+                <p>Contact us</p>
+                <p>About page</p>
+                <p>Size Guide</p>
+                <p>Shopping & Resturns</p>
+                <p>Privacy</p>
+            </div>
+            <div class="third-info">
+                <h4>Shop</h4>
+                <p>Men's Shopping</p>
+                <p>Women's Shopping</p>
+                <p>Kid's Shopping</p>
+                <p>Accessories</p>
+                <p>Discount</p>
+            </div>
+
+            <div class="fourth-info">
+                <h4>Company</h4>
+                <p>About</p>
+                <p>Blog</p>
+                <p>Affiliate</p>
+                <p>Login</p>
+            </div>
+
+            <div class="five">
+                <h4>Subscribe</h4>
+                <p>Receive Updates, Hot Deals, Discounts Sent Straight In Your Inbox Daily</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                <p>Receive Updates, Hot Deals, Discounts Sent Straight In Your Inbox Daily</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="end-text">
+        <p>Copyright @ @2024. Al Rights Reserved.Designd By Fdhl.</p>
+    </div>
+     
+    <script src="java.js"></script>
+</body>
+</html>
